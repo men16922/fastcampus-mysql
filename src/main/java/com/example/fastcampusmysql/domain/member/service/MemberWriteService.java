@@ -15,6 +15,11 @@ public class MemberWriteService {
     private final MemberRepository memberRepository;
     private final MemberNicknameHistoryRepository memberNicknameHistoryRepository;
 
+    /**
+     * 회원정보(이메일, 닉네임, 생년월일)을 등록한다.
+     * @param command
+     * @return
+     */
     @Transactional
     public Member create(RegisterMemberCommand command) {
         var member = Member.builder()
